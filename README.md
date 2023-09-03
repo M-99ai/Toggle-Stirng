@@ -1,2 +1,19 @@
-# Toggle-Stirng
-Problem You have been given a String S consisting of uppercase and lowercase English alphabets. You need to change the case of each alphabet in this String. That is, all the uppercase letters should be converted to lowercase and all the lowercase letters should be converted to uppercase. You need to then print the resultant String to output. 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc=new Scanner(System.in);
+        String S=sc.next();
+        String S1="";
+        for(int i=0;i<S.length();i++){
+            Character c=S.charAt(i);
+            if(Character.isLowerCase(c)){
+                S1=S1+Character.toUpperCase(c);
+            }else{
+                S1=S1+Character.toLowerCase(c);
+            }
+        }
+        System.out.print(S1);
+    }
+}
